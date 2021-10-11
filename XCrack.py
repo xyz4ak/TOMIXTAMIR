@@ -579,9 +579,9 @@ class crack:
 		self.ada=[]
 		self.cp=[]
 		self.ko=0
-		print((p+"\n["+p+"•"+p+"]"+p+" Crack With Pass Default/Manual [d/m]"))
+		print((h+"\n["+h+"•"+h+"]"+h+" Crack Dengan Password Default/Manual [d/m]"))
 		while True:
-			f=input(p+"["+p+"•"+p+"]"+p+" Pilih : ")
+			f=input(h+"["+h+"•"+h+"]"+h+" Pilih : ")
 			if f=="":continue
 			elif f=="m":
 				try:
@@ -621,19 +621,19 @@ class crack:
 						except:continue
 				except Exception as e:
 					print(("   %s"%e))
-				print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+				print((k+"\n["+k+"•"+k+"]"+k+" Crack Dimulai..."+k+"\n["+k+"•"+k+"]"+k+" Akun [OK] Simpan ke : ok.txt"+k+"\n["+k+"•"+k+"]"+k+" Akun [CP] Simpan ke : cp.txt\n"))
 				ThreadPool(35).map(self.main,self.fl)
 				os.remove(self.apk)
 				exit()
 				break
 	def pwlist(self):
-		self.pw=input(k+"["+p+"•"+k+"]"+p+" Password List : ").split(",")
+		self.pw=input(p+"["+p+"•"+p+"]"+p+" Ini Password : ").split(",")
 		if len(self.pw) ==0:
 			self.pwlist()
 		else:
 			for i in self.fl:
 				i.update({"pw":self.pw})
-			print((k+"\n["+p+"•"+k+"]"+p+" Crack Started..."+k+"\n["+p+"•"+k+"]"+p+" Account [OK] Saved to : ok.txt"+k+"\n["+p+"•"+k+"]"+p+" Account [CP] Saved to : cp.txt\n"))
+			print((k+"\n["+k+"•"+k+"]"+k+" Crack Dimulai..."+k+"\n["+k+"•"+k+"]"+k+" Akun [OK] Simpan ke : ok.txt"+k+"\n["+k+"•"+k+"]"+k+" Akun [CP] Simpan ke : cp.txt\n"))
 			ThreadPool(30).map(self.main,self.fl)
 			os.remove(self.apk)
 			exit()
